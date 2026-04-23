@@ -16,7 +16,7 @@
 
 ## The Problem
 
-Credit card fraud costs the global economy **$32 billion annually**. This is not an accuracy problem — it is a **cost-sensitive decision problem** where:
+Credit card fraud costs the global economy **$32 billion annually**. This is not an accuracy problem; it is a **cost-sensitive decision problem** where:
 
 - A **missed fraud** (False Negative) = direct financial loss to the bank
 - A **false alarm** (False Positive) = customer friction + investigation cost
@@ -43,7 +43,7 @@ A model predicting *"not fraud"* for every transaction achieves **99.83% accurac
 | KNN + SMOTE | 0.943 | 0.812 | 0.798 | 81.2% | $21,200 |
 | Naive Bayes + SMOTE | 0.861 | 0.784 | 0.701 | 78.4% | $28,900 |
 
-*Results approximate — actual values depend on run. Key findings hold across runs.*
+*Results approximate - actual values depend on run. Key findings hold across runs.*
 
 **Winner: Logistic Regression + SMOTE**, fastest inference, highest AUC, most interpretable for regulatory compliance.
 
@@ -87,6 +87,7 @@ Identifies which PCA-transformed features drive fraud predictions, essential for
 ```
 credit-card-fraud-detection/
 ├── credit-card-fraud-detection-classification.ipynb
+├── PROJECT_WRITEUP.md
 ├── outputs/
 │   ├── 01_class_imbalance.png
 │   ├── 02_time_patterns.png
@@ -109,9 +110,9 @@ credit-card-fraud-detection/
 
 ## Dataset
 
-- **Source:** [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) — ULB Machine Learning Group
+- **Source:** [Credit Card Fraud Detection](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud) - ULB Machine Learning Group
 - **Size:** 284,807 transactions × 31 features
-- **Fraud rate:** 492 frauds = **0.172%** — extreme class imbalance
+- **Fraud rate:** 492 frauds = **0.172%** - extreme class imbalance
 - **Features:** V1–V28 (PCA-anonymised), Time, Amount
 
 ---
@@ -131,18 +132,11 @@ credit-card-fraud-detection/
 ## How to Run
 
 ```bash
-git clone https://github.com/fiza-pathan/credit-card-fraud-detection.git
+git clone https://github.com/fiza-pathan/credit-card-fraud-classification.git
 cd credit-card-fraud-detection
 pip install -r requirements.txt
 # Download dataset from Kaggle and place in /data/
-jupyter notebook notebooks/credit_card_fraud_detection.ipynb
+jupyter notebook credit-card-fraud-detection-classification.ipynb
 ```
-
----
-
-## Part of My AI/ML Portfolio
-
-**ML Phase:** Regression ✅ → **Classification** ✅ → Ensemble → Time Series → Unsupervised → Capstone  
-**Next:** Project 3 — Customer Churn & Lifetime Value with Random Forest, XGBoost & LightGBM
 
 [GitHub Profile](https://github.com/fiza-pathan) · [Kaggle](https://www.kaggle.com/fizapathan21)
