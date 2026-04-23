@@ -1,4 +1,4 @@
-# Credit Card Fraud Detection — Classification Algorithm Battle
+# Credit Card Fraud Detection - Classification Algorithm Battle
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3-orange?logo=scikit-learn)
@@ -10,7 +10,7 @@
 > **Logistic Regression · K-Nearest Neighbours · Naive Bayes · Support Vector Machine**  
 > With SMOTE oversampling · Cost-sensitive evaluation · Business impact analysis · SHAP explainability
 
-**[View Kaggle Notebook](#)** | **[Portfolio](#)** | **[Project 1 — Regression](https://github.com/fiza-pathan/medical-cost-regression)**
+**[View Kaggle Notebook](#)** | **[Portfolio](#)**
 
 ---
 
@@ -29,8 +29,8 @@ A model predicting *"not fraud"* for every transaction achieves **99.83% accurac
 
 1. Which classifier best detects fraud in severely imbalanced data (0.17% fraud rate)?
 2. How does SMOTE oversampling change algorithm rankings?
-3. Which model **minimises total financial loss** — not just maximises accuracy?
-4. What is the cost-optimal classification threshold — and why is it never 0.5?
+3. Which model **minimises total financial loss**, not just maximises accuracy?
+4. What is the cost-optimal classification threshold, and why is it never 0.5?
 
 ---
 
@@ -45,29 +45,29 @@ A model predicting *"not fraud"* for every transaction achieves **99.83% accurac
 
 *Results approximate — actual values depend on run. Key findings hold across runs.*
 
-**Winner: Logistic Regression + SMOTE** — fastest inference, highest AUC, most interpretable for regulatory compliance.
+**Winner: Logistic Regression + SMOTE**, fastest inference, highest AUC, most interpretable for regulatory compliance.
 
 ---
 
 ## What Makes This Project Different
 
 ### 1. Business Cost Framework
-Every model is evaluated not just on F1 — but on **total financial loss**:
-- False Negative cost = 100% of missed fraud transaction amount
+Every model is evaluated not just on F1, but on **total financial loss**:
+- False Negative cost = 100% of the missed fraud transaction amount
 - False Positive cost = $10 investigation cost per false alarm
 - Models are ranked by dollars saved, not statistical metrics alone
 
 ### 2. SMOTE Deep Dive
-Explains *why* SMOTE works, *how* synthetic samples are generated, and compares it against class_weight balancing — two different philosophies for the same problem.
+Explains *why* SMOTE works, *how* synthetic samples are generated, and compares it against class_weight balancing, two different philosophies for the same problem.
 
 ### 3. Threshold Optimisation
-Demonstrates that the default 0.5 threshold is almost never optimal for fraud detection. Shows how to find the cost-minimising threshold for any business tolerance level.
+Demonstrates that the default 0.5 threshold is rarely optimal for fraud detection. Shows how to find the cost-minimising threshold for any business tolerance level.
 
 ### 4. Precision-Recall vs ROC
-Explains why PR curves are more honest than ROC curves for imbalanced datasets — and shows the difference visually.
+Explains why PR curves are more honest than ROC curves for imbalanced datasets, and shows the difference visually.
 
 ### 5. SHAP Explainability
-Identifies which PCA-transformed features drive fraud predictions — essential for regulatory compliance in financial AI.
+Identifies which PCA-transformed features drive fraud predictions, essential for regulatory compliance in financial AI.
 
 ---
 
@@ -75,7 +75,7 @@ Identifies which PCA-transformed features drive fraud predictions — essential 
 
 | Algorithm | Use When |
 |---|---|
-| **Logistic Regression** | Production baseline — fast, interpretable, regulatory-friendly, scales to billions of transactions |
+| **Logistic Regression** | Production baseline, fast, interpretable, regulatory-friendly, scales to billions of transactions |
 | **SVM (RBF)** | Non-linear decision boundaries needed, dataset fits in memory |
 | **KNN** | Local neighbourhood patterns matter, no strong distributional assumptions |
 | **Naive Bayes** | Real-time streaming at microsecond latency, acceptable accuracy tradeoff |
@@ -86,9 +86,8 @@ Identifies which PCA-transformed features drive fraud predictions — essential 
 
 ```
 credit-card-fraud-detection/
-├── notebooks/
-│   └── credit_card_fraud_detection.ipynb
-├── assets/
+├── credit-card-fraud-detection-classification.ipynb
+├── outputs/
 │   ├── 01_class_imbalance.png
 │   ├── 02_time_patterns.png
 │   ├── 03_feature_discriminability.png
